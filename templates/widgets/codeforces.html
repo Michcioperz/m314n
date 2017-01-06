@@ -1,0 +1,6 @@
+{% set info = widget.get_info() %}
+{% trans %}I take part in Codeforces algorithmic competitions with better or worse results.{% endtrans %}
+{% trans rank = info.rank, rating = info.rating %}My current rank is {{ rank }} ({{ rating }} points).{% endtrans %}
+{% if info.rating == info.maxRating %}{% trans %}I'm on top of my Codeforces career at the moment.{% endtrans %}
+{% elif info.rank == info.maxRank %}{% trans maxRating=info.maxRating %}It's my best rank, although my best score is {{ maxRating }} points.{% endtrans %}
+{% else %}{% trans maxRank = info.maxRank, maxRating = info.maxRating %}This isn't the best I can do, my best rank is {{ maxRank }} ({{ maxRating }} points).{% endtrans %}

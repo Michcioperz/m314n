@@ -1,0 +1,8 @@
+flask
+flask-babel
+requests
+codeforces_api
+redis
+hiredis
+gunicorn
+setproctitle

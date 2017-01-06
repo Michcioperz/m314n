@@ -1,0 +1,6 @@
+{% extends "core.html" %}
+{% block content %}
+{% for widget in widgets %}
+  {% include widget.template with context %}
+{% endfor %}
+{% endblock content %}
